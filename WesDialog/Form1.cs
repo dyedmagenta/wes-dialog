@@ -19,18 +19,18 @@ namespace WesDialog
 
         private void CopyPolish()
         {
-//            var text = excelControl1.PolishText;
-//            if (text == null || string.Empty.Equals(text)) return;
-//            Clipboard.SetText(text);
-//            wmlControl1.ReplacementText = text;
+            var text = excelControl1.PolishText;
+            if (text == null || string.Empty.Equals(text)) return;
+            Clipboard.SetText(text);
+            wmlControl1.ReplacementText = text;
         }
 
         private void CopyEnglish()
         {
-//            var text = excelControl1.EnglishText;
-//            if (text == null || string.Empty.Equals(text)) return;
-//            Clipboard.SetText(text);
-//            wmlControl1.ReplacementText = text;
+            var text = excelControl1.EnglishText;
+            if (text == null || string.Empty.Equals(text)) return;
+            Clipboard.SetText(text);
+            wmlControl1.ReplacementText = text;
         }
 
         private void englishSnippetRadio_CheckedChanged(object sender, EventArgs e)
@@ -53,10 +53,10 @@ namespace WesDialog
             {
                 CopyPolish();
             }
-//
-//            wmlControl1.ReplaceSnippet();
-//            wmlControl1.NextSnippet();
-//            excelControl1.NextRow();
+
+            wmlControl1.ReplaceSnippet();
+            wmlControl1.NextSnippet();
+            excelControl1.NextRow();
         }
 
         private void approveSnippetBtn_Click(object sender, EventArgs e)
