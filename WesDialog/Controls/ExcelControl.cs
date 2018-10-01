@@ -18,10 +18,14 @@ namespace WesDialog.Controls
         private int _currentWorksheetIndex;
         private int _currentRowIndex;
 
+        private const int InfoColumn = 1;
+        private const string InfoColumnAddress = "A";
         private const int PolishColumn = 2;
         private const string PolishColumnAddress = "B";
         private const int EnglishColumn = 3;
         private const string EnglishColumnAddress = "C";
+        private const int CommentColumn = 4;
+        private const string CommentColumnAddress = "D";
 
         private const char CarriageReturnCharacter = '\r';
         private const char NewLineCharacter = '\n';
@@ -41,6 +45,7 @@ namespace WesDialog.Controls
         {
             if (loadFileDialog.ShowDialog() != DialogResult.OK) return;
 
+            fileLabel.Text = loadFileDialog.SafeFileName;
             _currentWorksheetIndex = 1;
             ExcelPackage package = new ExcelPackage(new FileInfo(loadFileDialog.FileName));
             _worksheets = package.Workbook.Worksheets;
@@ -52,7 +57,7 @@ namespace WesDialog.Controls
             _currentRowIndex = 1;
             spreadsheetLabel.Text = _worksheets[_currentWorksheetIndex].Name;
             UpdateSpreadsheetCounter();
-            UpdateTranslationBoxes();
+            UpdateTextBoxes();
         }
 
         private void UpdateSpreadsheetCounter()
@@ -60,13 +65,19 @@ namespace WesDialog.Controls
             spreadsheetCounterLabel.Text = _currentWorksheetIndex + @"/" + _worksheets.Count;
         }
 
-        private void UpdateTranslationBoxes()
+        private void UpdateTextBoxes()
         {
+            tagInfoBox.Text = PrepareValueForTextBox(
+                _worksheets[_currentWorksheetIndex].GetValue<string>(_currentRowIndex, InfoColumn));
+
             polishTextBox.Text = PrepareValueForTextBox(
                 _worksheets[_currentWorksheetIndex].GetValue<string>(_currentRowIndex, PolishColumn));
 
             englishTextBox.Text = PrepareValueForTextBox(
                 _worksheets[_currentWorksheetIndex].GetValue<string>(_currentRowIndex, EnglishColumn));
+
+            commentBox.Text = PrepareValueForTextBox(
+                _worksheets[_currentWorksheetIndex].GetValue<string>(_currentRowIndex, CommentColumn));
 
             addressLabel.Text = PolishColumnAddress + _currentRowIndex + ':' + EnglishColumnAddress + _currentRowIndex;
         }
@@ -133,7 +144,7 @@ namespace WesDialog.Controls
         public void NextRow()
         {
             _currentRowIndex++;
-            UpdateTranslationBoxes();
+            UpdateTextBoxes();
         }
 
         public void PreviousRow()
@@ -144,7 +155,7 @@ namespace WesDialog.Controls
             }
 
             _currentRowIndex--;
-            UpdateTranslationBoxes();
+            UpdateTextBoxes();
         }
 
         private void loadFileBtn_Click(object sender, EventArgs e)

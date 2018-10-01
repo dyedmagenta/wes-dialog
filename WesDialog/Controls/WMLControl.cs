@@ -68,6 +68,7 @@ namespace WesDialog.Controls
 
                     lineIndex++;
                 }
+
                 return snippetsList;
             }
         }
@@ -191,6 +192,7 @@ namespace WesDialog.Controls
                             snippetIndex++;
                         }
                     }
+
                     builder.AppendLine(text);
                     lineIndex++;
                 }

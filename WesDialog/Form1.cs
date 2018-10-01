@@ -19,18 +19,18 @@ namespace WesDialog
 
         private void CopyPolish()
         {
-            var text = excelControl1.PolishText;
-            if (text == null || string.Empty.Equals(text)) return;
-            Clipboard.SetText(text);
-            wmlControl1.ReplacementText = text;
+//            var text = excelControl1.PolishText;
+//            if (text == null || string.Empty.Equals(text)) return;
+//            Clipboard.SetText(text);
+//            wmlControl1.ReplacementText = text;
         }
 
         private void CopyEnglish()
         {
-            var text = excelControl1.EnglishText;
-            if (text == null || string.Empty.Equals(text)) return;
-            Clipboard.SetText(text);
-            wmlControl1.ReplacementText = text;
+//            var text = excelControl1.EnglishText;
+//            if (text == null || string.Empty.Equals(text)) return;
+//            Clipboard.SetText(text);
+//            wmlControl1.ReplacementText = text;
         }
 
         private void englishSnippetRadio_CheckedChanged(object sender, EventArgs e)
@@ -53,10 +53,10 @@ namespace WesDialog
             {
                 CopyPolish();
             }
-
-            wmlControl1.ReplaceSnippet();
-            wmlControl1.NextSnippet();
-            excelControl1.NextRow();
+//
+//            wmlControl1.ReplaceSnippet();
+//            wmlControl1.NextSnippet();
+//            excelControl1.NextRow();
         }
 
         private void approveSnippetBtn_Click(object sender, EventArgs e)
@@ -72,22 +72,22 @@ namespace WesDialog
                     ApproveSnippet();
                     break;
                 case 'k':
-                    excelControl1.PreviousRow();
+//                    excelControl1.PreviousRow();
                     break;
                 case 'l':
-                    excelControl1.NextRow();
+//                    excelControl1.NextRow();
                     break;
                 case 'a':
-                    wmlControl1.PreviousSnippet();
+//                    wmlControl1.PreviousSnippet();
                     break;
                 case 's':
-                    wmlControl1.NextSnippet();
+//                    wmlControl1.NextSnippet();
                     break;
                 case 'r':
-                    wmlControl1.RestoreSnippet();
+//                    wmlControl1.RestoreSnippet();
                     break;
                 case 't':
-                    wmlControl1.ReplaceSnippet();
+//                    wmlControl1.ReplaceSnippet();
                     break;
                 case 'y':
                     CopyPolish();
