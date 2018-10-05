@@ -41,9 +41,9 @@
             this.tagInfoLabel = new System.Windows.Forms.Label();
             this.loadFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tagInfoBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.saveFileBtn = new System.Windows.Forms.Button();
-            this.tagInfoBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,7 @@
             this.loadFileBtn.TabIndex = 23;
             this.loadFileBtn.Text = "Load";
             this.loadFileBtn.UseVisualStyleBackColor = true;
+            this.loadFileBtn.Click += new System.EventHandler(this.loadFileBtn_Click);
             // 
             // nextTranslationBtn
             // 
@@ -216,6 +217,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(711, 410);
             this.tableLayoutPanel1.TabIndex = 33;
             // 
+            // tagInfoBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tagInfoBox, 3);
+            this.tagInfoBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tagInfoBox.Location = new System.Drawing.Point(534, 51);
+            this.tagInfoBox.Multiline = true;
+            this.tagInfoBox.Name = "tagInfoBox";
+            this.tagInfoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tagInfoBox.Size = new System.Drawing.Size(174, 150);
+            this.tagInfoBox.TabIndex = 47;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -230,7 +242,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(472, 30);
             this.tableLayoutPanel2.TabIndex = 45;
             // 
@@ -244,17 +256,6 @@
             this.saveFileBtn.TabIndex = 46;
             this.saveFileBtn.Text = "Save";
             this.saveFileBtn.UseVisualStyleBackColor = true;
-            // 
-            // tagInfoBox
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.tagInfoBox, 3);
-            this.tagInfoBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tagInfoBox.Location = new System.Drawing.Point(534, 51);
-            this.tagInfoBox.Multiline = true;
-            this.tagInfoBox.Name = "tagInfoBox";
-            this.tagInfoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tagInfoBox.Size = new System.Drawing.Size(174, 150);
-            this.tagInfoBox.TabIndex = 47;
             // 
             // PotControl
             // 
