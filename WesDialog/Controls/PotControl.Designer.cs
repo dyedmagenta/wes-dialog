@@ -28,50 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.englishTextBox = new System.Windows.Forms.TextBox();
-            this.polishTextBox = new System.Windows.Forms.TextBox();
+            this.msgStrTextBox = new System.Windows.Forms.TextBox();
+            this.msgIdTextBox = new System.Windows.Forms.TextBox();
             this.loadFileBtn = new System.Windows.Forms.Button();
-            this.nextTranslationBtn = new System.Windows.Forms.Button();
-            this.previousTranslationBtn = new System.Windows.Forms.Button();
-            this.addressLabel = new System.Windows.Forms.Label();
+            this.nextSnippetBtn = new System.Windows.Forms.Button();
+            this.previousSnippetBtn = new System.Windows.Forms.Button();
+            this.snippetAmountLabel = new System.Windows.Forms.Label();
             this.fileInfoLabel = new System.Windows.Forms.Label();
             this.fileLabel = new System.Windows.Forms.Label();
-            this.commentBox = new System.Windows.Forms.TextBox();
+            this.referenceTextBox = new System.Windows.Forms.TextBox();
             this.commentInfoLabel = new System.Windows.Forms.Label();
             this.tagInfoLabel = new System.Windows.Forms.Label();
             this.loadFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tagInfoTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.saveFileBtn = new System.Windows.Forms.Button();
-            this.tagInfoBox = new System.Windows.Forms.TextBox();
+            this.restoreBtn = new System.Windows.Forms.Button();
+            this.originalSnippetLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // englishTextBox
+            // msgStrTextBox
             // 
-            this.englishTextBox.AcceptsReturn = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.englishTextBox, 9);
-            this.englishTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.englishTextBox.Location = new System.Drawing.Point(3, 207);
-            this.englishTextBox.Multiline = true;
-            this.englishTextBox.Name = "englishTextBox";
-            this.tableLayoutPanel1.SetRowSpan(this.englishTextBox, 2);
-            this.englishTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.englishTextBox.Size = new System.Drawing.Size(525, 168);
-            this.englishTextBox.TabIndex = 33;
+            this.msgStrTextBox.AcceptsReturn = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.msgStrTextBox, 9);
+            this.msgStrTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.msgStrTextBox.Location = new System.Drawing.Point(3, 207);
+            this.msgStrTextBox.Multiline = true;
+            this.msgStrTextBox.Name = "msgStrTextBox";
+            this.tableLayoutPanel1.SetRowSpan(this.msgStrTextBox, 2);
+            this.msgStrTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.msgStrTextBox.Size = new System.Drawing.Size(525, 168);
+            this.msgStrTextBox.TabIndex = 33;
             // 
-            // polishTextBox
+            // msgIdTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.polishTextBox, 9);
-            this.polishTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.polishTextBox.Location = new System.Drawing.Point(3, 33);
-            this.polishTextBox.Multiline = true;
-            this.polishTextBox.Name = "polishTextBox";
-            this.tableLayoutPanel1.SetRowSpan(this.polishTextBox, 2);
-            this.polishTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.polishTextBox.Size = new System.Drawing.Size(525, 168);
-            this.polishTextBox.TabIndex = 32;
+            this.tableLayoutPanel1.SetColumnSpan(this.msgIdTextBox, 9);
+            this.msgIdTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.msgIdTextBox.Location = new System.Drawing.Point(3, 33);
+            this.msgIdTextBox.Multiline = true;
+            this.msgIdTextBox.Name = "msgIdTextBox";
+            this.tableLayoutPanel1.SetRowSpan(this.msgIdTextBox, 2);
+            this.msgIdTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.msgIdTextBox.Size = new System.Drawing.Size(525, 168);
+            this.msgIdTextBox.TabIndex = 32;
             // 
             // loadFileBtn
             // 
@@ -84,38 +86,38 @@
             this.loadFileBtn.Text = "Load";
             this.loadFileBtn.UseVisualStyleBackColor = true;
             // 
-            // nextTranslationBtn
+            // nextSnippetBtn
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.nextTranslationBtn, 2);
-            this.nextTranslationBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.nextTranslationBtn.Location = new System.Drawing.Point(121, 384);
-            this.nextTranslationBtn.Name = "nextTranslationBtn";
-            this.nextTranslationBtn.Size = new System.Drawing.Size(112, 23);
-            this.nextTranslationBtn.TabIndex = 26;
-            this.nextTranslationBtn.Text = "Next";
-            this.nextTranslationBtn.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.nextSnippetBtn, 2);
+            this.nextSnippetBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.nextSnippetBtn.Location = new System.Drawing.Point(121, 384);
+            this.nextSnippetBtn.Name = "nextSnippetBtn";
+            this.nextSnippetBtn.Size = new System.Drawing.Size(112, 23);
+            this.nextSnippetBtn.TabIndex = 26;
+            this.nextSnippetBtn.Text = "Next";
+            this.nextSnippetBtn.UseVisualStyleBackColor = true;
             // 
-            // previousTranslationBtn
+            // previousSnippetBtn
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.previousTranslationBtn, 2);
-            this.previousTranslationBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.previousTranslationBtn.Location = new System.Drawing.Point(3, 384);
-            this.previousTranslationBtn.Name = "previousTranslationBtn";
-            this.previousTranslationBtn.Size = new System.Drawing.Size(112, 23);
-            this.previousTranslationBtn.TabIndex = 37;
-            this.previousTranslationBtn.Text = "Previous";
-            this.previousTranslationBtn.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.previousSnippetBtn, 2);
+            this.previousSnippetBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.previousSnippetBtn.Location = new System.Drawing.Point(3, 384);
+            this.previousSnippetBtn.Name = "previousSnippetBtn";
+            this.previousSnippetBtn.Size = new System.Drawing.Size(112, 23);
+            this.previousSnippetBtn.TabIndex = 37;
+            this.previousSnippetBtn.Text = "Previous";
+            this.previousSnippetBtn.UseVisualStyleBackColor = true;
             // 
-            // addressLabel
+            // snippetAmountLabel
             // 
-            this.addressLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(239, 388);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(3, 0, 3, 9);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(22, 13);
-            this.addressLabel.TabIndex = 28;
-            this.addressLabel.Text = "_:_";
+            this.snippetAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.snippetAmountLabel.AutoSize = true;
+            this.snippetAmountLabel.Location = new System.Drawing.Point(239, 388);
+            this.snippetAmountLabel.Margin = new System.Windows.Forms.Padding(3, 0, 3, 9);
+            this.snippetAmountLabel.Name = "snippetAmountLabel";
+            this.snippetAmountLabel.Size = new System.Drawing.Size(24, 13);
+            this.snippetAmountLabel.TabIndex = 28;
+            this.snippetAmountLabel.Text = "_/_";
             // 
             // fileInfoLabel
             // 
@@ -139,16 +141,16 @@
             this.fileLabel.TabIndex = 42;
             this.fileLabel.Text = "_";
             // 
-            // commentBox
+            // referenceTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.commentBox, 3);
-            this.commentBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.commentBox.Location = new System.Drawing.Point(534, 225);
-            this.commentBox.Multiline = true;
-            this.commentBox.Name = "commentBox";
-            this.commentBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.commentBox.Size = new System.Drawing.Size(174, 150);
-            this.commentBox.TabIndex = 40;
+            this.tableLayoutPanel1.SetColumnSpan(this.referenceTextBox, 3);
+            this.referenceTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.referenceTextBox.Location = new System.Drawing.Point(534, 225);
+            this.referenceTextBox.Multiline = true;
+            this.referenceTextBox.Name = "referenceTextBox";
+            this.referenceTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.referenceTextBox.Size = new System.Drawing.Size(174, 150);
+            this.referenceTextBox.TabIndex = 40;
             // 
             // commentInfoLabel
             // 
@@ -157,9 +159,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.commentInfoLabel, 2);
             this.commentInfoLabel.Location = new System.Drawing.Point(534, 209);
             this.commentInfoLabel.Name = "commentInfoLabel";
-            this.commentInfoLabel.Size = new System.Drawing.Size(54, 13);
+            this.commentInfoLabel.Size = new System.Drawing.Size(65, 13);
             this.commentInfoLabel.TabIndex = 39;
-            this.commentInfoLabel.Text = "Comment:";
+            this.commentInfoLabel.Text = "References:";
             // 
             // tagInfoLabel
             // 
@@ -191,18 +193,20 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.Controls.Add(this.tagInfoBox, 9, 2);
-            this.tableLayoutPanel1.Controls.Add(this.englishTextBox, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.polishTextBox, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.nextTranslationBtn, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.previousTranslationBtn, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.addressLabel, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.commentBox, 9, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tagInfoTextBox, 9, 2);
+            this.tableLayoutPanel1.Controls.Add(this.msgStrTextBox, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.msgIdTextBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.nextSnippetBtn, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.previousSnippetBtn, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.snippetAmountLabel, 4, 5);
+            this.tableLayoutPanel1.Controls.Add(this.referenceTextBox, 9, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.loadFileBtn, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.saveFileBtn, 10, 0);
             this.tableLayoutPanel1.Controls.Add(this.tagInfoLabel, 9, 1);
             this.tableLayoutPanel1.Controls.Add(this.commentInfoLabel, 9, 3);
+            this.tableLayoutPanel1.Controls.Add(this.restoreBtn, 10, 5);
+            this.tableLayoutPanel1.Controls.Add(this.originalSnippetLabel, 5, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -215,6 +219,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.32F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(711, 410);
             this.tableLayoutPanel1.TabIndex = 33;
+            // 
+            // tagInfoTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.tagInfoTextBox, 3);
+            this.tagInfoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tagInfoTextBox.Location = new System.Drawing.Point(534, 51);
+            this.tagInfoTextBox.Multiline = true;
+            this.tagInfoTextBox.Name = "tagInfoTextBox";
+            this.tagInfoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tagInfoTextBox.Size = new System.Drawing.Size(174, 150);
+            this.tagInfoTextBox.TabIndex = 47;
             // 
             // tableLayoutPanel2
             // 
@@ -230,7 +245,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(472, 30);
             this.tableLayoutPanel2.TabIndex = 45;
             // 
@@ -245,16 +260,28 @@
             this.saveFileBtn.Text = "Save";
             this.saveFileBtn.UseVisualStyleBackColor = true;
             // 
-            // tagInfoBox
+            // restoreBtn
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.tagInfoBox, 3);
-            this.tagInfoBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tagInfoBox.Location = new System.Drawing.Point(534, 51);
-            this.tagInfoBox.Multiline = true;
-            this.tagInfoBox.Name = "tagInfoBox";
-            this.tagInfoBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tagInfoBox.Size = new System.Drawing.Size(174, 150);
-            this.tagInfoBox.TabIndex = 47;
+            this.tableLayoutPanel1.SetColumnSpan(this.restoreBtn, 2);
+            this.restoreBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.restoreBtn.Location = new System.Drawing.Point(593, 384);
+            this.restoreBtn.Name = "restoreBtn";
+            this.restoreBtn.Size = new System.Drawing.Size(115, 23);
+            this.restoreBtn.TabIndex = 48;
+            this.restoreBtn.Text = "Restore";
+            this.restoreBtn.UseVisualStyleBackColor = true;
+            // 
+            // originalSnippetLabel
+            // 
+            this.originalSnippetLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.originalSnippetLabel, 5);
+            this.originalSnippetLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.originalSnippetLabel.Location = new System.Drawing.Point(298, 388);
+            this.originalSnippetLabel.Margin = new System.Windows.Forms.Padding(3, 0, 3, 9);
+            this.originalSnippetLabel.Name = "originalSnippetLabel";
+            this.originalSnippetLabel.Size = new System.Drawing.Size(289, 13);
+            this.originalSnippetLabel.TabIndex = 49;
+            this.originalSnippetLabel.Text = "_";
             // 
             // PotControl
             // 
@@ -273,13 +300,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox englishTextBox;
+        private System.Windows.Forms.TextBox msgStrTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox polishTextBox;
-        private System.Windows.Forms.Button nextTranslationBtn;
-        private System.Windows.Forms.Button previousTranslationBtn;
-        private System.Windows.Forms.Label addressLabel;
-        private System.Windows.Forms.TextBox commentBox;
+        private System.Windows.Forms.TextBox msgIdTextBox;
+        private System.Windows.Forms.Button nextSnippetBtn;
+        private System.Windows.Forms.Button previousSnippetBtn;
+        private System.Windows.Forms.Label snippetAmountLabel;
+        private System.Windows.Forms.TextBox referenceTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label fileInfoLabel;
         private System.Windows.Forms.Label fileLabel;
@@ -288,6 +315,8 @@
         private System.Windows.Forms.Label tagInfoLabel;
         private System.Windows.Forms.Label commentInfoLabel;
         private System.Windows.Forms.OpenFileDialog loadFileDialog;
-        private System.Windows.Forms.TextBox tagInfoBox;
+        private System.Windows.Forms.TextBox tagInfoTextBox;
+        private System.Windows.Forms.Button restoreBtn;
+        private System.Windows.Forms.Label originalSnippetLabel;
     }
 }
