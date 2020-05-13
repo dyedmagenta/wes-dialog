@@ -184,13 +184,13 @@ namespace WesDialog.Controls
                 while (!reader.EndOfStream)
                 {
                     var text = reader.ReadLine();
-                    if (lineIndex == _snippets[snippetIndex].LineIndex)
+                    if (snippetIndex < _snippets.Count && lineIndex == _snippets[snippetIndex].LineIndex)
                     {
                         if (_snippets[snippetIndex].IsReplacement && text != null)
                         {
                             text = _snippetRegex.Replace(text, _snippets[snippetIndex].ReplacementText);
-                            snippetIndex++;
                         }
+                        snippetIndex++;
                     }
 
                     builder.AppendLine(text);
