@@ -43,7 +43,19 @@ namespace WesDialog
             _isEnglish = false;
         }
 
-        private void ApproveSnippet()
+        private void ApproveText()
+        {
+            if(tabControl1.SelectedIndex == 0)
+            {
+                ApproveWML();
+            } else
+            {
+                ApprovePot();
+            }
+
+        }
+
+        private void ApproveWML()
         {
             if (_isEnglish)
             {
@@ -59,9 +71,34 @@ namespace WesDialog
             excelControl1.NextRow();
         }
 
+        private void ApprovePot()
+        {
+
+            var textToCopy = "";
+
+            if (_isEnglish)
+            {
+                var text = excelControl1.EnglishText;
+                if (text == null || string.Empty.Equals(text)) return;
+                Clipboard.SetText(text);
+                textToCopy = text;
+            }
+            else
+            {
+                var text = excelControl1.PolishText;
+                if (text == null || string.Empty.Equals(text)) return;
+                Clipboard.SetText(text);
+                textToCopy = text;
+            }
+
+            potControl1.Replace(textToCopy);
+            potControl1.DisplayNextEntry();
+            excelControl1.NextRow();
+        }
+
         private void approveSnippetBtn_Click(object sender, EventArgs e)
         {
-            ApproveSnippet();
+            ApproveText();
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -69,7 +106,7 @@ namespace WesDialog
             switch (e.KeyChar)
             {
                 case 'p':
-                    ApproveSnippet();
+                    ApproveText();
                     break;
                 case 'k':
 //                    excelControl1.PreviousRow();

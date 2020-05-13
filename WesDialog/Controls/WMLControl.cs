@@ -196,7 +196,6 @@ namespace WesDialog.Controls
                     builder.AppendLine(text);
                     lineIndex++;
                 }
-
                 return builder.ToString();
             }
         }
