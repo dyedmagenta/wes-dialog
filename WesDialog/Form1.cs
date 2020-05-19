@@ -109,22 +109,22 @@ namespace WesDialog
                     ApproveText();
                     break;
                 case 'k':
-//                    excelControl1.PreviousRow();
+                    excelControl1.PreviousRow();
                     break;
                 case 'l':
-//                    excelControl1.NextRow();
+                    excelControl1.NextRow();
                     break;
                 case 'a':
-//                    wmlControl1.PreviousSnippet();
+                    wmlControl1.PreviousSnippet();
                     break;
                 case 's':
-//                    wmlControl1.NextSnippet();
+                    wmlControl1.NextSnippet();
                     break;
                 case 'r':
-//                    wmlControl1.RestoreSnippet();
+                    wmlControl1.RestoreSnippet();
                     break;
                 case 't':
-//                    wmlControl1.ReplaceSnippet();
+                    wmlControl1.ReplaceSnippet();
                     break;
                 case 'y':
                     CopyPolish();

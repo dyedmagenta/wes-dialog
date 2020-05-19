@@ -51,6 +51,7 @@ namespace WesDialog.Controls
             {
                 _catalog = result.Catalog;
                 _replacedEntries = new string[_catalog.Count];
+                textStream.Close();
             }
             else
             {
@@ -60,7 +61,7 @@ namespace WesDialog.Controls
 
         private void DisplayCatalogEntry()
         {
-            if(_currentEntryIndex >= _catalog.Count || _currentEntryIndex < 0)
+            if(_currentEntryIndex == null || _currentEntryIndex >= _catalog.Count || _currentEntryIndex < 0)
             {
                 //err
                 return;
@@ -142,6 +143,18 @@ namespace WesDialog.Controls
         private void previousSnippetBtn_Click(object sender, EventArgs e)
         {
             DisplayPreviousEntry();
+        }
+
+        private void saveFileBtn_Click(object sender, EventArgs e)
+        {
+            var stream = File.Create(loadFileDialog.FileName);
+
+            var settings = new POGeneratorSettings();
+            settings.IgnoreEncoding = false;
+            settings.PreserveHeadersOrder = true;
+
+            var generator = new POGenerator(settings);
+            generator.Generate(stream, _catalog);
         }
     }
 }

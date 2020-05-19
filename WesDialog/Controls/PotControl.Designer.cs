@@ -84,6 +84,7 @@
             this.saveFileBtn.TabIndex = 46;
             this.saveFileBtn.Text = "Save";
             this.saveFileBtn.UseVisualStyleBackColor = true;
+            this.saveFileBtn.Click += new System.EventHandler(this.saveFileBtn_Click);
             // 
             // loadFileBtn
             // 
